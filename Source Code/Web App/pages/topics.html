@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Topic Modeling</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- MetisMenu CSS -->
+  <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+  <!-- Timeline CSS -->
+  <link href="../dist/css/timeline.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+  <!-- Morris Charts CSS -->
+  <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">RECR</a>
+      </div>
+      <!-- /.navbar-header -->
+
+      <ul class="nav navbar-top-links navbar-right">
+        <li class=""><a href="../index.html"><i class="fa fa-home"></i></a>
+        </li>
+        <li><a href="index.html">Data</a>
+        </li>
+        <li><a href="#">Events</a>
+        </li>
+        <li><a href="about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="page-wrapper" class="wrapper-mine">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Event Detection</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-clock-o fa-fw"></i> Events Timeline <i class="fa fa-info-circle fa-fw"></i>
+            </div>
+            <div class="panel-body">
+              <ul class="timeline">
+                <li>
+                  <div class="timeline-badge success"><i class="fa fa-group"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.bbc.com/news/world-middle-east-36126944" target="_blank">250 US Special Forces Troops sent from America to Syria as Military Advisors</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 25/04/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Extra U.S. forces in Syria to support local allies: White House adviser: U.S. President Barack Obama has decid..." -
+                        <em>Feedsynbot</em> <a href="https://twitter.com/feedsynbot/status/724525542758719489" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge info"><i class="fa fa-child"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.theguardian.com/world/2016/apr/25/tories-vote-against-accepting-3000-child-refugees" target="_blank">3000 Unaccompanied Child Refugees to be accepted in UK</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 26/04/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"UK government votes against taking 3,000 child refugees - LONDON — A campaign for Britain to accept 3,000 child..." -
+                        <em>sysradiopro</em> <a href="https://twitter.com/Sysradiopro/status/724874695582044162" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-badge"><i class="fa fa-life-saver"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.reuters.com/article/us-europe-migrants-greece-turkey-idUSKCN0XN1FI?feedType=RSS&feedName=topNews&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+reuters%2FtopNews+%28News+%2F+US+%2F+Top+News%29" target="_blank">Migration transportation between Greece and Turkey</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 26/04/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Migrants trickle back to Turkey from Greece under EU deal: ATHENS (Reuters) - Two ferries left Greece for Tur..." -
+                        <em>FirstTo1000</em> <a href="https://twitter.com/FirstTo1000/status/724930028681748480" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge warning"><i class="fa fa-exchange"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.express.co.uk/news/uk/664730/Britain-terror-warning-European-union-ISIS-Islamic-State-EU-terrorist-cells-UK" target="_blank">Warnings for Europe about open borders and Sleeper Cells</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 26/05/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Open borders allow Isil sleeper cells into Europe and UK capable of carrying out Paris-style attacks, warns US intelligence chief …" -
+                        <em>WorldNews_net</em> <a href="https://twitter.com/worldnews_net/status/725062707142074369" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.theguardian.com/us-news/2016/may/02/john-kerry-meets-saudi-foreign-minister-in-syria-ceasefire-talks" target="_blank">John Kerry proposes de-escalation for Syria Τruce</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 28/05/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Syria conflict: UN envoy calls on US and Russia to save talks: Syria conflict: UN envoy calls on US and Russi..." -
+                        <em>Refugee News</em> <a href="https://twitter.com/IntRefugeenews/status/725520753718759424" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-badge danger"><i class="fa fa-fighter-jet"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="https://www.theguardian.com/world/2016/apr/28/deadly-airstrike-on-hospital-aleppo-syria-reports-say" target="_blank">Aleppo Hospital Airstrikes</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 28/04/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Aid Group Says 14 Patients, Staff Among Those Killed in MSF-Backed Hospital in Syria's Aleppo: Aid group says..." -
+                        <em>IG : _______oie</em> <a href="https://twitter.com/iamidunnu/status/725615664031891456" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://www.bbc.co.uk/news/world-middle-east-36181336" target="_blank">Twin car bombings in Southern Iraq</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 01/05/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Double car bombings in southern Iraq kill at least 18 people, wound up to 40 others, Iraqi officials say - AP" -
+                        <em>Breaking News</em> <a href="https://twitter.com/BreakingNews/status/726727618968604672" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4 class="timeline-title"><a href="http://edition.cnn.com/2016/04/23/middleeast/syrian-jet-crash/index.html?eref=rss_topstories&utm_source=twitterfeed&utm_medium=twitter" target="_blank">Clashes between ISIS and Kurdish &amp; Syrian Government forces</a></h4>
+                      <p>
+                        <small class="text-muted"><i class="fa fa-clock-o"></i> 03/05/2016 via Twitter</small>
+                      </p>
+                    </div>
+                    <div class="timeline-body">
+                      <p>"Kurdish forces have retaken the Assyrian town of Tel Esqof this morning, after Daesh attacked the village with numerous VBIEDs." -
+                        <em>The Kurd (Menbic)</em> <a href="https://twitter.com/AhmedoKurdi/status/727472659160780800" target="_blank"><i class="fa fa-link"></i></a> </p>
+                      <!-- <p><strong>Topic Relevance:</strong> 1.0</p> -->
+                      <p>
+                        <strong>Sentiment:</strong> Neutral</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Summary of Events grouped by Relevance<i class="fa fa-info-circle fa-fw"></i>
+            </div>
+            <!-- .panel-heading -->
+            <div class="panel-body">
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Most Relevant</a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <p class="lead text-muted text-center" style="font-size: 16px;">Regarding the Syrian Refugee Crisis. Mostly consisted of Periodical events. Most events are entirely consistent.</p>
+                      <p>
+                        <strong>Topic 1:</strong> US Special Forces Troops
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 2:</strong> Twin Car Bombings
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 3:</strong> Sleeper Cells Warnings
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 4:</strong> Aleppo Airstrikes
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 5:</strong> Unaccompanied Children Refugees in UK
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 6:</strong> Migration Crisis in Greece and Turkey
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 7:</strong> Kurdish &amp; Syrian Government against ISIS
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>9/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 8:</strong> John Kerry asks for Syria truce
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Considerably Relevant</a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p class="lead text-muted text-center" style="font-size: 16px;">Regarding crisis of refugees and immigrants worldwide and political situations. Mostly consisted of General events. Most events are highly consistent.</p>
+                      <p>
+                        <strong>Topic 1:</strong> Manus Detention Centre found Illegal
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 2:</strong> Extremist-muslim behaviour in Western societies
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 3:</strong> Provoking Thoughts and Prays for Refugee Crisis
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>10/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 4:</strong> Politicians of Pakistan against PM Nawaz Sharif
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 5:</strong> Donald Trump Wall for Illegal Immigrants
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>7/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 6:</strong> Islamophobia
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>6/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 7:</strong>
+                        <ul>
+                          <li>VP Biden's surprise visit to Baghdad</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>6/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>United Cyber Caliphate (UCC) releases 'Kill List'</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>4/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Double Themed</a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p class="lead text-muted text-center" style="font-size: 16px;">Double themed events, where both themes are almost equally existent. Consisted of both Periodical and General events. Most events are semi-consistent.</p>
+                      <p>
+                        <strong>Topic 1:</strong>
+                        <ul>
+                          <li>Solidarity in general</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>8/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>Solidarity for Labour Day</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>4/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 2:</strong>
+                        <ul>
+                          <li>Indian Foreign Secretary S. Jaishankar meeting Pakistani counterpart Aizaz Ahmed Chaudhry</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>5/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>Younis Khan about Pakistan cup</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>3/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 3:</strong>
+                        <ul>
+                          <li>Death of Harry Wu Chinese Campaigner</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>4/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>Theresa May statements about UK exit from European Convention of Human Rights</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>4/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 4:</strong>
+                        <ul>
+                          <li>Discussions on American Politics &amp; why not to vote Hillary Klinton</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>6/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>Peter Hitchens comments on Ken Livingstone statement that Hitler was Zionist</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>3/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 5:</strong>
+                        <ul>
+                          <li>Cartels help ISIS terrorists from Mexico to US</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>5/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>General</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>US Soldier killed in Iraq</li>
+                        </ul>
+                        <ul class="list-inline text-muted" style="margin-left: 2em;">
+                          <li>Consistency:
+                            <em>3/10</em>
+                          </li>
+                          <li>Annotation:
+                            <em>Periodical</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-danger">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Irrelevant</a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p class="lead text-muted text-center" style="font-size: 16px;">Irrelevant topics either because of content or because of formation.</p>
+                      <p>
+                        <strong>Topic 1:</strong> Iraq Weather Forecast
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>7/10</em>
+                          </li>
+                          <li>Issue:
+                            <em>Irrelevant</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 2:</strong> Request for Suspention of ISIS Loonie Tune Terrorist
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>9/10</em>
+                          </li>
+                          <li>Issue:
+                            <em>Badly Formed</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 3:</strong> Dover - Calais ferry routes
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>3/10</em>
+                          </li>
+                          <li>Issue:
+                            <em>Irrelevant &amp; Badly Formed</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                      <p>
+                        <strong>Topic 4:</strong> General discussion regarding threats against ISIS
+                        <ul class="list-inline text-muted" style="margin-left: 1px;">
+                          <li>Consistency:
+                            <em>7/10</em>
+                          </li>
+                          <li>Issue:
+                            <em>Badly Formed</em>
+                          </li>
+                          <li>Sentiment:
+                            <em>Neutral</em>
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .panel-body -->
+          </div>
+          <!-- /.panel -->
+          <!-- /.col-lg-8 -->
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- jQuery -->
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+  <!-- Morris Charts JavaScript -->
+  <script src="../bower_components/raphael/raphael-min.js"></script>
+  <script src="../bower_components/morrisjs/morris.min.js"></script>
+  <script src="../js/morris-data.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
